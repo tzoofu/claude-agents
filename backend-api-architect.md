@@ -1,6 +1,6 @@
 ---
-name: backend-api-expert
-description: Use this agent for API design, microservices architecture, and backend implementation guidance. Examples: <example>Context: User needs to design a new REST API. user: 'I need to create an API for user management with proper authentication' assistant: 'I'll use the backend-api-expert agent to design a comprehensive API structure' <commentary>API design requires the backend-api-expert's specialized knowledge.</commentary></example> <example>Context: User wants to implement GraphQL. user: 'Should I use REST or GraphQL for my real-time chat application?' assistant: 'Let me use the backend-api-expert agent to analyze your requirements' <commentary>API technology choice needs backend-api-expert guidance.</commentary></example>
+name: backend-api-architect
+description: Use this agent for API design, microservices architecture, and backend implementation guidance. Examples: <example>Context: User needs to design a new REST API. user: 'I need to create an API for user management with proper authentication' assistant: 'I'll use the backend-api-architect agent to design a comprehensive API structure' <commentary>API design requires the backend-api-architect's specialized knowledge.</commentary></example> <example>Context: User wants to implement GraphQL. user: 'Should I use REST or GraphQL for my real-time chat application?' assistant: 'Let me use the backend-api-architect agent to analyze your requirements' <commentary>API technology choice needs backend-api-architect guidance.</commentary></example>
 model: sonnet
 color: purple
 ---

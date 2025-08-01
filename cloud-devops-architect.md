@@ -1,6 +1,7 @@
 ---
 name: cloud-devops-architect
 description: Use this agent when you need expert guidance on cloud infrastructure, DevOps practices, deployment strategies, monitoring solutions, or cloud architecture decisions. Examples: <example>Context: User needs help designing a scalable cloud infrastructure for a new application. user: 'I need to deploy a microservices application that can handle variable traffic loads and needs high availability' assistant: 'I'll use the cloud-devops-architect agent to design a comprehensive cloud infrastructure solution for your microservices deployment.' <commentary>Since the user needs cloud architecture expertise for scalable deployment, use the cloud-devops-architect agent to provide professional DevOps guidance.</commentary></example> <example>Context: User is experiencing performance issues with their current cloud setup. user: 'Our application is experiencing slow response times and we're seeing high costs on our AWS bill' assistant: 'Let me use the cloud-devops-architect agent to analyze your performance issues and cost optimization opportunities.' <commentary>Since the user has cloud performance and cost concerns, use the cloud-devops-architect agent to provide expert DevOps troubleshooting and optimization.</commentary></example>
+model: opus
 color: red
 ---
 
