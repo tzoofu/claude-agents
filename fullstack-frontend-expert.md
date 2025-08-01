@@ -1,6 +1,7 @@
 ---
 name: fullstack-frontend-expert
 description: Use this agent when you need comprehensive frontend development expertise that considers both web and mobile responsiveness, cross-platform compatibility, and frontend-backend integration. Examples: <example>Context: User needs to build a responsive dashboard component that works on both web and mobile. user: 'I need to create a data visualization dashboard that works well on desktop and mobile devices' assistant: 'I'll use the fullstack-frontend-expert agent to design a responsive dashboard with proper mobile optimization' <commentary>Since this requires frontend expertise with mobile responsiveness considerations, use the fullstack-frontend-expert agent.</commentary></example> <example>Context: User is implementing a form that needs to handle API integration. user: 'Help me build a user registration form that connects to our backend API' assistant: 'Let me use the fullstack-frontend-expert agent to create a form with proper validation and API integration' <commentary>This requires frontend development with backend integration awareness, perfect for the fullstack-frontend-expert agent.</commentary></example>
+model: sonnet
 color: green
 ---
 

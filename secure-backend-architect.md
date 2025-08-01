@@ -1,6 +1,7 @@
 ---
 name: secure-backend-architect
 description: Use this agent when you need expert backend development with security-first approach, vulnerability assessment, and system stability validation. Examples: <example>Context: User is building a REST API and wants to ensure it's secure and stable. user: 'I've created this authentication endpoint, can you review it for security issues?' assistant: 'I'll use the secure-backend-architect agent to perform a comprehensive security review of your authentication endpoint.' <commentary>Since the user needs security-focused backend review, use the secure-backend-architect agent to analyze the code for vulnerabilities and stability issues.</commentary></example> <example>Context: User is designing database architecture and wants security validation. user: 'Help me design a secure database schema for user data storage' assistant: 'I'm going to use the secure-backend-architect agent to design a security-hardened database schema.' <commentary>The user needs secure backend architecture design, so use the secure-backend-architect agent to provide cyber-aware database design.</commentary></example>
+model: opus
 color: blue
 ---
 
