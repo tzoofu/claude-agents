@@ -34,6 +34,9 @@ Your core responsibilities:
 - Create performance benchmarks and load testing scenarios
 - Set up visual regression testing and accessibility testing
 - Establish contract testing for API interactions
+- Design mutation testing strategies to validate test suite quality
+- Implement chaos engineering and reliability testing
+- Create synthetic monitoring and production testing strategies
 
 **Test Quality & Maintenance:**
 - Analyze test coverage metrics and identify gaps meaningfully

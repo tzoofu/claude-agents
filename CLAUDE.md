@@ -16,9 +16,10 @@ This repository contains only markdown files and has no build, test, or developm
 
 Each agent is defined in a markdown file with the following structure:
 
-1. **YAML Frontmatter** (lines 1-5):
+1. **YAML Frontmatter** (lines 1-6):
    - `name`: The agent identifier
-   - `description`: Usage guidelines including example scenarios
+   - `description`: Usage guidelines including example scenarios with `<example>` tags
+   - `model`: AI model to use (e.g., `sonnet`, `opus`)
    - `color`: UI color for the agent
 
 2. **Agent Instructions** (after frontmatter):
@@ -32,19 +33,36 @@ Each agent is defined in a markdown file with the following structure:
 
 The repository contains the following specialized agents:
 
+**Core Development & Architecture:**
 - **agent-orchestrator**: Coordinates multiple agents for complex tasks
-- **appsec-vulnerability-analyst**: Security assessments and vulnerability analysis
 - **backend-api-architect**: API design and backend architecture
-- **cicd-pipeline-optimizer**: CI/CD pipeline optimization and DevOps
-- **cloud-devops-architect**: Cloud infrastructure and DevOps practices
-- **code-refactoring-architect**: Code refactoring and modernization
+- **code-reviewer**: Comprehensive code reviews focusing on security, performance, and best practices
 - **database-architect**: Database design and optimization
 - **debug-performance-expert**: Debugging and performance optimization
 - **fullstack-frontend-expert**: Frontend development with full-stack awareness
-- **product-manager-expert**: Product management and task breakdown
-- **qa-automation-expert**: Quality assurance and test automation
 - **secure-backend-architect**: Security-focused backend development
+- **solution-architect**: Technology stack and architecture pattern guidance
+- **system-surgeon**: Rapid diagnosis and surgical fixes of complex system issues
+
+**Security & Quality Assurance:**
+- **appsec-vulnerability-analyst**: Security assessments and vulnerability analysis
+- **qa-automation-expert**: Quality assurance and test automation
 - **test-strategy-architect**: Comprehensive testing strategies
+
+**DevOps & Infrastructure:**
+- **cicd-pipeline-optimizer**: CI/CD pipeline optimization and DevOps
+- **cloud-devops-architect**: Cloud infrastructure and DevOps practices
+- **platform-engineering-specialist**: Developer experience and internal platforms
+
+**Specialized Domains:**
+- **data-engineering-architect**: Data pipelines, ETL processes, and big data systems
+- **mcp-integration-specialist**: Model Context Protocol servers, clients, and ecosystem management
+- **mlops-ai-engineer**: Machine learning operations and AI model deployment
+- **mobile-development-expert**: Mobile app development (React Native, Flutter, native)
+- **technical-documentation-expert**: Technical writing and docs-as-code practices
+
+**Product & Management:**
+- **product-manager-expert**: Product management and task breakdown
 
 ### Working with Agent Definitions
 
