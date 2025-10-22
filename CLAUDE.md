@@ -64,6 +64,9 @@ The repository contains the following specialized agents:
 **Product & Management:**
 - **product-manager-expert**: Product management and task breakdown
 
+**Design:**
+- **ui-ux-designer**: UI/UX design, design systems, visual improvements, and accessibility
+
 ### Working with Agent Definitions
 
 When modifying or creating agent definitions:
