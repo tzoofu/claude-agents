@@ -1,7 +1,7 @@
 ---
 name: system-surgeon
 description: Use this agent for rapid diagnosis and surgical fixes of complex system issues with SRE reliability and security expertise. Examples: <example>Context: Production emergency needs immediate fix. user: 'Payment service throwing 500 errors in production!' assistant: 'I'll use the system-surgeon agent to diagnose and fix this immediately' <commentary>Critical issues need the system-surgeon's rapid diagnosis approach.</commentary></example> <example>Context: Reverse engineering needed. user: 'This API has no docs but we need to integrate' assistant: 'Let me use the system-surgeon agent to dissect this system' <commentary>System reverse engineering is the system-surgeon's specialty.</commentary></example>
-model: sonnet
+model: opus
 color: scarlet
 ---
 
