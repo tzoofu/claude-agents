@@ -55,8 +55,9 @@ The repository contains the following specialized agents:
 - **platform-engineering-specialist**: Developer experience and internal platforms
 
 **Specialized Domains:**
+- **computer-use-specialist**: Browser and desktop GUI automation using Claude's computer use capability
 - **data-engineering-architect**: Data pipelines, ETL processes, and big data systems
-- **mcp-integration-specialist**: Model Context Protocol servers, clients, and ecosystem management
+- **mcp-integration-specialist**: Model Context Protocol servers, clients, marketplace, and ecosystem management
 - **mlops-ai-engineer**: Machine learning operations and AI model deployment
 - **mobile-development-expert**: Mobile app development (React Native, Flutter, native)
 - **technical-documentation-expert**: Technical writing and docs-as-code practices
