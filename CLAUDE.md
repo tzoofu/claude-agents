@@ -6,76 +6,79 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 This is a Claude Code agents repository containing specialized agent definitions for various software engineering tasks. Each agent is defined in a markdown file with YAML frontmatter specifying its metadata and a detailed description of its capabilities and behavior.
 
-## Commands
+## Repository Overview
 
-This repository contains only markdown files and has no build, test, or development commands. It serves as a configuration repository for Claude Code agents.
+No build, test, or run commands — this is a pure configuration repository of Claude Code agent definitions (markdown files only).
 
 ## High-Level Architecture
 
 ### Agent Definition Structure
 
-Each agent is defined in a markdown file with the following structure:
+Each agent is a single `.md` file with YAML frontmatter followed by free-form instructions:
 
-1. **YAML Frontmatter** (lines 1-6):
-   - `name`: The agent identifier
-   - `description`: Usage guidelines including example scenarios with `<example>` tags
-   - `model`: AI model to use (e.g., `sonnet`, `opus`)
-   - `color`: UI color for the agent
+```
+---
+name: <agent-identifier>        # used to invoke the agent
+description: <usage guidelines> # must include <example> tags with user/assistant/commentary
+model: sonnet | opus | haiku
+color: <any CSS color name>
+---
 
-2. **Agent Instructions** (after frontmatter):
-   - Role description and expertise
-   - Core responsibilities
-   - Specific approach and methodology
-   - Best practices and guidelines
-   - Output format expectations
+<Agent instructions body>
+```
+
+The `description` field is what Claude reads to decide *when* to spawn the agent. Every description should include at least two `<example>` blocks, each with `Context:`, `user:`, `assistant:`, and `<commentary>` elements.
+
+The instructions body typically covers: role/expertise statement, core responsibilities, approach/methodology, and output format expectations.
 
 ### Available Agents
 
-The repository contains the following specialized agents:
-
 **Core Development & Architecture:**
-- **agent-orchestrator**: Coordinates multiple agents for complex tasks
-- **backend-api-architect**: API design and backend architecture
-- **code-reviewer**: Comprehensive code reviews focusing on security, performance, and best practices
-- **database-architect**: Database design and optimization
-- **debug-performance-expert**: Debugging and performance optimization
-- **fullstack-frontend-expert**: Frontend development with full-stack awareness
-- **secure-backend-architect**: Security-focused backend development
-- **solution-architect**: Technology stack and architecture pattern guidance
-- **system-surgeon**: Rapid diagnosis and surgical fixes of complex system issues
+- **agent-orchestrator**: Coordinates multiple agents for complex, multi-domain tasks
+- **backend-api-architect**: API design, microservices, REST/GraphQL
+- **code-reviewer**: Security, performance, and best-practice code reviews
+- **database-architect**: Schema design, query optimization, data modeling
+- **debug-performance-expert**: Debugging, memory leaks, performance bottlenecks
+- **fullstack-frontend-expert**: Frontend with backend-integration awareness
+- **legacy-modernization-architect**: Legacy migration, strangler fig, monolith decomposition
+- **secure-backend-architect**: Security-first backend development
+- **solution-architect**: Tech stack selection and architecture patterns
+- **system-surgeon**: Rapid diagnosis and surgical fixes of production issues
+
+**AI & ML:**
+- **ai-model-developer**: ML model development, training, and evaluation
+- **llm-integration-architect**: RAG systems, prompt engineering, vector databases
+- **mlops-ai-engineer**: ML pipelines, model deployment, MLOps practices
 
 **Security & Quality Assurance:**
-- **appsec-vulnerability-analyst**: Security assessments and vulnerability analysis
-- **qa-automation-expert**: Quality assurance and test automation
-- **test-strategy-architect**: Comprehensive testing strategies
+- **appsec-vulnerability-analyst**: Security assessments, auth systems, vulnerability analysis
+- **qa-automation-expert**: QA automation strategy and test frameworks
+- **test-strategy-architect**: Unit/integration/e2e testing across languages
 
 **DevOps & Infrastructure:**
-- **cicd-pipeline-optimizer**: CI/CD pipeline optimization and DevOps
-- **cloud-devops-architect**: Cloud infrastructure and DevOps practices
-- **platform-engineering-specialist**: Developer experience and internal platforms
+- **cicd-pipeline-optimizer**: CI/CD pipelines, build optimization, deployment strategies
+- **cloud-devops-architect**: Cloud infrastructure, monitoring, deployment architecture
+- **observability-sre-specialist**: Observability, SLOs, incident response, reliability
+- **platform-engineering-specialist**: Internal developer platforms, self-service infrastructure
 
 **Specialized Domains:**
-- **computer-use-specialist**: Browser and desktop GUI automation using Claude's computer use capability
-- **data-engineering-architect**: Data pipelines, ETL processes, and big data systems
-- **mcp-integration-specialist**: Model Context Protocol servers, clients, marketplace, and ecosystem management
-- **mlops-ai-engineer**: Machine learning operations and AI model deployment
-- **mobile-development-expert**: Mobile app development (React Native, Flutter, native)
-- **technical-documentation-expert**: Technical writing and docs-as-code practices
+- **accessibility-specialist**: WCAG compliance, ARIA, screen reader support
+- **computer-use-specialist**: Browser and desktop GUI automation via Claude computer use
+- **data-engineering-architect**: Data pipelines, ETL/ELT, big data systems
+- **mcp-integration-specialist**: MCP server development, client integration, ecosystem management
+- **mobile-development-expert**: React Native, Flutter, native iOS/Android
+- **mr-review-resolver**: Auto-resolves all open GitLab MR review threads sequentially
+- **technical-documentation-expert**: Technical writing, API docs, docs-as-code
 
-**Product & Management:**
-- **product-manager-expert**: Product management and task breakdown
-
-**Design:**
-- **ui-ux-designer**: UI/UX design, design systems, visual improvements, and accessibility
+**Product & Design:**
+- **product-manager-expert**: Product management, feature planning, task breakdown
+- **ui-ux-designer**: UI/UX design, design systems, visual improvements, accessibility
 
 ### Working with Agent Definitions
 
 When modifying or creating agent definitions:
 
-1. Maintain the consistent YAML frontmatter format
-2. Ensure descriptions include clear example scenarios with `<example>` tags
-3. Provide detailed role descriptions and responsibilities
-4. Include specific methodologies and best practices
-5. Define clear output expectations for the agent
-
-Each agent should be self-contained with all necessary context for its specialized domain.
+1. Keep `description` focused on *when to use*, not *what the agent does* — it drives automatic agent selection
+2. `<example>` tags in the description must include `<commentary>` explaining the selection rationale
+3. The instructions body should be self-contained — agents have no shared context
+4. Match `model` to task complexity: `opus` for deep reasoning/architecture, `sonnet` for most tasks
