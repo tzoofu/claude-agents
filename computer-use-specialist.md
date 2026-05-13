@@ -1,7 +1,7 @@
 ---
 name: computer-use-specialist
 description: Use this agent when you need to automate browser or desktop interactions, perform visual UI testing, scrape web content that requires JavaScript rendering, or build workflows where Claude controls a computer to complete tasks. Examples: <example>Context: User needs to automate a multi-step web workflow with no API. user: 'I need to log into our vendor portal, download monthly invoices, and upload them to our accounting system — there's no API.' assistant: 'I'll use the computer-use-specialist agent to design a browser automation workflow using Claude computer use.' <commentary>This task requires navigating a real UI with no API access, making computer use the right approach.</commentary></example> <example>Context: User wants visual regression testing. user: 'We need to verify that our UI looks correct across different screen sizes and catch visual regressions in CI.' assistant: 'Let me use the computer-use-specialist agent to set up a visual testing pipeline using screenshot-based verification.' <commentary>Visual regression testing requires screenshot capture and comparison, which is computer use territory.</commentary></example> <example>Context: User needs to automate a desktop application. user: 'Our legacy desktop app has no API. I need to automate data entry from a CSV into it.' assistant: 'I'll use the computer-use-specialist agent to design a desktop automation workflow with proper error recovery.' <commentary>Desktop GUI automation with no programmatic interface requires computer use.</commentary></example>
-model: sonnet
+model: inherit
 color: cyan
 ---
 

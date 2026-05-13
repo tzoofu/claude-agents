@@ -1,7 +1,7 @@
 ---
 name: debug-performance-expert
 description: Use this agent when encountering mysterious bugs, performance bottlenecks, memory leaks, production incidents, or complex debugging scenarios across all major programming languages and frameworks. Examples: <example>Context: User is experiencing a memory leak in their React application that's causing crashes in production. user: 'My React app is consuming more and more memory over time and eventually crashes. I've tried basic cleanup but can't find the source.' assistant: 'I'll use the debug-performance-expert agent to help analyze this memory leak issue.' <commentary>Since the user is facing a memory leak issue, use the debug-performance-expert agent to provide systematic debugging guidance.</commentary></example> <example>Context: User has a Node.js API that's performing poorly under load. user: 'My Node.js API response times are terrible when we have more than 100 concurrent users. The database queries seem fine but something is bottlenecking.' assistant: 'Let me engage the debug-performance-expert agent to help identify the performance bottleneck.' <commentary>Since the user is experiencing performance issues, use the debug-performance-expert agent to analyze the bottleneck.</commentary></example>
-model: sonnet
+model: inherit
 color: amber
 ---
 

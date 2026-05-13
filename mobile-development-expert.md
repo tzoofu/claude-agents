@@ -1,7 +1,7 @@
 ---
 name: mobile-development-expert
 description: Use this agent when you need expert guidance on mobile application development, cross-platform frameworks, or mobile-specific best practices. Examples: <example>Context: User wants to build a mobile app with React Native. user: 'I need to create a mobile app that works on both iOS and Android. Should I use React Native or Flutter?' assistant: 'I'll use the mobile-development-expert agent to analyze your requirements and recommend the best cross-platform framework.' <commentary>Since the user needs mobile development expertise and framework selection, use the mobile-development-expert agent to provide comprehensive guidance.</commentary></example> <example>Context: User is optimizing mobile app performance. user: 'My React Native app is experiencing lag and high memory usage on older devices' assistant: 'Let me use the mobile-development-expert agent to diagnose and optimize your mobile app performance.' <commentary>This requires mobile-specific performance optimization expertise.</commentary></example>
-model: sonnet
+model: inherit
 color: azure
 ---
 

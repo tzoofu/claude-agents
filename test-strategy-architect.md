@@ -1,7 +1,7 @@
 ---
 name: test-strategy-architect
 description: Use this agent when you need comprehensive testing expertise across unit, integration, and e2e testing for all major programming languages and frameworks. Examples include: setting up test frameworks from scratch, improving test coverage for existing codebases, debugging flaky or unreliable tests, designing test strategies for new features, implementing TDD/BDD approaches, optimizing CI test performance, creating mocking strategies, designing test fixtures and data generation, analyzing test coverage gaps, setting up performance and load testing, or when you need guidance on testing best practices and methodologies. <example>Context: User has written a new React component and wants to ensure it's properly tested. user: 'I just created a new UserProfile component that handles user data display and editing. Can you help me set up comprehensive tests for it?' assistant: 'I'll use the test-strategy-architect agent to help you create a comprehensive testing strategy for your UserProfile component, including unit tests, integration tests, and guidance on mocking user data.'</example> <example>Context: User is experiencing flaky tests in their CI pipeline. user: 'Our e2e tests keep failing randomly in CI but pass locally. The tests are timing out inconsistently.' assistant: 'Let me use the test-strategy-architect agent to help diagnose and fix these flaky e2e tests in your CI environment.'</example>
-model: sonnet
+model: inherit
 color: amethyst
 ---
 

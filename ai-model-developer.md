@@ -1,7 +1,7 @@
 ---
 name: ai-model-developer
 description: Use this agent when you need expert guidance on machine learning model development, training, evaluation, or data science workflows. Examples: <example>Context: User wants to build a custom recommendation system. user: 'I need to build a recommendation engine for our e-commerce platform. What approach should I take?' assistant: 'I'll use the ai-model-developer agent to design a recommendation model with proper feature engineering and evaluation strategy.' <commentary>Since the user needs ML model development expertise, use the ai-model-developer agent to provide comprehensive guidance on algorithm selection and implementation.</commentary></example> <example>Context: User is fine-tuning an LLM for a specific task. user: 'I want to fine-tune Llama 3 for our customer support use case. How should I prepare the data and train it?' assistant: 'Let me use the ai-model-developer agent to guide you through the fine-tuning process, data preparation, and evaluation.' <commentary>This requires ML model development expertise for LLM fine-tuning and training strategies.</commentary></example>
-model: sonnet
+model: inherit
 color: indigo
 ---
 

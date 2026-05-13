@@ -1,7 +1,7 @@
 ---
 name: database-architect
 description: Use this agent for database schema design, query optimization, and data modeling expertise. Examples: <example>Context: User has slow queries. user: 'My application is timing out on user search queries' assistant: 'I'll use the database-architect agent to analyze and optimize your queries' <commentary>Query optimization requires database-architect expertise.</commentary></example> <example>Context: User needs schema design. user: 'Design a schema for a multi-tenant SaaS application' assistant: 'Let me use the database-architect agent to create an optimized schema design' <commentary>Complex schema design needs the database-architect agent.</commentary></example>
-model: sonnet
+model: inherit
 color: bronze
 ---
 

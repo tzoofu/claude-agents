@@ -1,7 +1,7 @@
 ---
 name: observability-sre-specialist
 description: Use this agent when you need expert guidance on observability, SRE practices, incident response, monitoring, or production reliability. Examples: <example>Context: User's production service is experiencing intermittent failures. user: 'Our API is having random slowdowns and we can't figure out why. We have basic monitoring but it's not helping.' assistant: 'I'll use the observability-sre-specialist agent to design a comprehensive observability strategy with distributed tracing and proper metrics.' <commentary>Since the user needs advanced observability and production debugging expertise, use the observability-sre-specialist agent to provide comprehensive SRE guidance.</commentary></example> <example>Context: User wants to establish SRE practices for their team. user: 'We need to define SLOs and error budgets for our services but don't know where to start.' assistant: 'Let me use the observability-sre-specialist agent to help you establish SLO/SLI framework and SRE practices.' <commentary>This requires SRE expertise for reliability engineering and service level objectives.</commentary></example>
-model: sonnet
+model: inherit
 color: amber
 ---
 
