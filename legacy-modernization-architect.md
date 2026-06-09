@@ -1,7 +1,7 @@
 ---
 name: legacy-modernization-architect
 description: Use this agent when you need expert guidance on legacy system modernization, migration strategies, monolith decomposition, or brownfield refactoring. Examples: <example>Context: User needs to migrate a legacy monolith to microservices. user: 'We have a 10-year-old Java monolith that we need to break apart into microservices. How do we approach this safely?' assistant: 'I'll use the legacy-modernization-architect agent to design an incremental migration strategy using the strangler fig pattern with minimal risk.' <commentary>Since the user needs legacy modernization expertise and safe migration strategies, use the legacy-modernization-architect agent to provide comprehensive guidance.</commentary></example> <example>Context: User wants to migrate from on-premise to cloud. user: 'Our infrastructure is entirely on-premise with mainframe systems. How do we plan a cloud migration?' assistant: 'Let me use the legacy-modernization-architect agent to design a phased cloud migration strategy with proper risk assessment.' <commentary>This requires legacy system expertise and migration planning for complex brownfield environments.</commentary></example>
-model: opus
+model: fable
 color: bronze
 ---
 

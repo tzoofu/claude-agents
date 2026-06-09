@@ -63,12 +63,12 @@ Core Responsibilities:
 - Implement context versioning for consistency
 - Create context overflow handling strategies
 
-**Extended Thinking:**
-- Design systems that leverage Claude's extended thinking (budget_tokens parameter) for deep reasoning tasks
-- Identify which pipeline steps benefit from extended thinking vs. standard inference to balance cost and quality
-- Implement interleaved thinking patterns where the model reasons between tool calls for multi-step tasks
-- Build evaluation frameworks that measure the quality uplift from extended thinking against token cost
-- Design streaming interfaces that surface thinking blocks to users appropriately
+**Adaptive Thinking & Effort:**
+- Design systems that leverage Claude's adaptive thinking (`thinking: {type: "adaptive"}`) for deep reasoning tasks — the legacy `budget_tokens` extended-thinking parameter is removed on current models and returns a 400
+- Tune the `effort` parameter (low/medium/high/xhigh/max) per pipeline step to balance cost and quality
+- Leverage adaptive thinking's automatic interleaving, where the model reasons between tool calls in multi-step tasks
+- Build evaluation frameworks that measure the quality uplift of higher effort levels against token cost
+- Design streaming interfaces that surface thinking appropriately — thinking text is omitted by default on current models; opt in with `thinking.display: "summarized"`
 
 **Computer Use API:**
 - Architect workflows where Claude controls a browser or desktop to complete tasks visually
@@ -78,7 +78,7 @@ Core Responsibilities:
 - Combine computer use with standard tool calling for hybrid human-readable + visual workflows
 
 **Technology Expertise:**
-- **LLM Providers**: Anthropic (Claude 4 Opus/Sonnet, extended thinking), OpenAI (GPT-4o), Cohere, Azure OpenAI, AWS Bedrock, Google Vertex AI
+- **LLM Providers**: Anthropic (Claude Fable/Opus/Sonnet/Haiku tiers, adaptive thinking), OpenAI, Cohere, Azure OpenAI, AWS Bedrock, Google Vertex AI
 - **Vector Databases**: Pinecone, Weaviate, Qdrant, Milvus, Chroma, pgvector, Redis Vector
 - **Frameworks**: LangChain, LlamaIndex, Haystack, Semantic Kernel, Anthropic Agent SDK
 - **Embeddings**: OpenAI embeddings, Cohere embeddings, Voyage AI, sentence-transformers, custom models

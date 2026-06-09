@@ -20,7 +20,7 @@ Each agent is a single `.md` file with YAML frontmatter followed by free-form in
 ---
 name: <agent-identifier>        # used to invoke the agent
 description: <usage guidelines> # must include <example> tags with user/assistant/commentary
-model: sonnet | opus | haiku
+model: fable | opus | sonnet | haiku | inherit
 color: <any CSS color name>
 ---
 
@@ -81,4 +81,4 @@ When modifying or creating agent definitions:
 1. Keep `description` focused on *when to use*, not *what the agent does* — it drives automatic agent selection
 2. `<example>` tags in the description must include `<commentary>` explaining the selection rationale
 3. The instructions body should be self-contained — agents have no shared context
-4. Match `model` to task complexity: `opus` for deep reasoning/architecture, `sonnet` for most tasks
+4. Match `model` to task complexity: `fable` (top tier, ~2× opus cost) for the hardest long-horizon reasoning — multi-agent orchestration, architecture decisions, complex migrations, production surgery; `opus` for deep reasoning; `sonnet` for most tasks; `haiku` for lightweight ones. Omit or use `inherit` (the default) to follow the main session's model
