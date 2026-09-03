@@ -2,6 +2,8 @@
 name: solution-architect
 description: Use this agent when you need guidance on choosing the right technology stack, architecture patterns, or development approach for a project. Examples: <example>Context: User needs to decide how to build a new feature. user: 'I need to build a real-time collaboration feature. Should I use WebSockets, SSE, or polling?' assistant: 'I'll use the solution-architect agent to analyze your requirements and recommend the best approach' <commentary>Technology choice decision requires the solution-architect's expertise.</commentary></example> <example>Context: User is starting a new project. user: 'What tech stack should I use for a social media app that needs to scale to millions of users?' assistant: 'Let me use the solution-architect agent to design an appropriate architecture' <commentary>Architecture and stack selection needs solution-architect guidance.</commentary></example>
 model: fable
+tools: Read, Grep, Glob, Write, WebSearch, mcp__claude_ai_Context7__resolve-library-id, mcp__claude_ai_Context7__query-docs, mcp__Ref__ref_search_documentation, mcp__Ref__ref_read_url
+effort: high
 color: turquoise
 ---
 

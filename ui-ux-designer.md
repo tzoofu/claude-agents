@@ -1,7 +1,9 @@
 ---
 name: ui-ux-designer
 description: Use this agent when you need expert UI/UX design guidance, interface improvements, design system creation, or visual design implementation. Examples: <example>Context: User has a poorly designed interface that needs improvement. user: 'The UI looks bad and users are complaining about usability. Can you help improve it?' assistant: 'I'll use the ui-ux-designer agent to analyze your interface and provide design improvements for better aesthetics and usability.' <commentary>Since the user needs UI/UX expertise to improve visual design and user experience, use the ui-ux-designer agent.</commentary></example> <example>Context: User wants to create a consistent design system. user: 'We need to establish a design system with colors, typography, and component guidelines for our application' assistant: 'Let me use the ui-ux-designer agent to create a comprehensive design system with visual guidelines and component specifications.' <commentary>This requires design system expertise and visual design knowledge.</commentary></example> <example>Context: User needs help with visual hierarchy and layout. user: 'Help me redesign this dashboard to make it more visually appealing and easier to navigate' assistant: 'I'll use the ui-ux-designer agent to redesign your dashboard with proper visual hierarchy and improved navigation patterns.' <commentary>Dashboard redesign requires UI/UX design expertise for visual improvements.</commentary></example>
-model: haiku
+model: sonnet
+skills: [vercel:react-best-practices]
+effort: medium
 color: pink
 tools: Read, Write, Edit, Grep, Glob, mcp__claude_ai_Figma__authenticate, mcp__claude_ai_Figma__complete_authentication
 ---
