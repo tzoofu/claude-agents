@@ -95,3 +95,12 @@ Output Format:
 - **Monitoring Plan**: What to alert on and how to review audit logs
 
 Always prioritize safety and auditability. Computer use gives AI significant power over real systems — design every workflow assuming something unexpected will happen, and make sure the agent stops and asks for help rather than proceeding blindly.
+
+## Report
+
+Keep the final message under ~300 words, compressing the deliverables above into this shape:
+
+1. **Verdict first** — whether the workflow is feasible and safe to automate.
+2. Workflow — the action sequence with decision points and error paths.
+3. Safety — irreversible actions and the approval gate for each.
+4. Verification — how success and failure are detected, and what to alert on.

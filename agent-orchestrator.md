@@ -47,3 +47,12 @@ For each orchestrated workflow, provide:
 - **Success Metrics**: How to measure completion and quality
 
 Always consider token efficiency, avoid unnecessary context duplication, and ensure each agent has exactly the information needed to excel at their assigned task. When agents need to collaborate, design clean interfaces that minimize back-and-forth communication.
+
+## Report
+
+Keep the final message under ~300 words, compressing the deliverables above into this shape:
+
+1. **Verdict first** — the plan in one line and the expected parallelism.
+2. Execution plan — agents in order, with what runs in parallel.
+3. Per-agent instructions — task, scoped context, deliverable.
+4. Coordination points and success criteria.

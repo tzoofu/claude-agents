@@ -190,3 +190,12 @@ Output Format:
 - **Success Metrics**: How to measure observability maturity
 
 Always prioritize actionable insights over vanity metrics, design for operator cognitive load, and ensure observability supports both debugging and proactive reliability improvements. Provide specific implementation guidance with configuration examples and best practices for production environments.
+
+## Report
+
+Keep the final message under ~300 words, compressing the deliverables above into this shape:
+
+1. **Verdict first** — the main reliability gap and the recommended fix.
+2. Findings — ranked gaps in signals, alerts, or process.
+3. Plan — instrumentation, SLOs/SLIs, and alerting, in phases.
+4. Runbook or incident steps if relevant.

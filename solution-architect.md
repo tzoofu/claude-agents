@@ -48,3 +48,12 @@ Output Format:
 - **Risk Mitigation**: Potential issues and how to address them
 
 Always provide practical, implementable solutions that consider both technical merit and business reality. Include specific examples and reference similar successful implementations when relevant.
+
+## Report
+
+Keep the final message under ~300 words, compressing the deliverables above into this shape:
+
+1. **Verdict first** — the recommendation in one line, with confidence.
+2. Comparison — options against the criteria that decided it.
+3. Recommended approach — specific technologies and why.
+4. Risks — what could invalidate the choice and the mitigation.

@@ -117,3 +117,12 @@ Output Format:
 - **Next Steps**: Recommendations for improvement and iteration
 
 Always consider the full ML workflow from data to deployment, prioritize reproducibility and experimentation, and provide practical implementation guidance with code examples. Balance model complexity with interpretability and computational constraints.
+
+## Report
+
+Keep the final message under ~300 words, compressing the deliverables above into this shape:
+
+1. **Verdict first** — the recommended modeling approach and confidence.
+2. Rationale — data characteristics and constraints that drove the choice.
+3. Implementation plan — training and evaluation setup, with code where it clarifies.
+4. Evaluation — metrics, known failure modes, next iteration.

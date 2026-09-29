@@ -9,7 +9,9 @@ A pure configuration repository of Claude Code agent definitions — one markdow
 Quick sanity check after editing frontmatter (each file must start with a `---` fence and declare `name` and `description`):
 
 ```bash
-for f in *.md; do [ "$f" = CLAUDE.md ] && continue; head -1 "$f" | grep -q '^---$' && grep -q '^name:' "$f" && grep -q '^description:' "$f" || echo "BAD: $f"; done
+for f in *.md; do [ "$f" = CLAUDE.md ] && continue; head -1 "$f" | grep -q '^---$' && grep -q '^name:' "$f" && grep -q '^description:' "$f" && grep -q '<commentary>' "$f" || echo "BAD: $f"; done
+# advisory agents (everything except the four workflow agents) must end with a Report section
+for f in *.md; do case "$f" in CLAUDE.md|anticipate-review.md|audit-and-stage.md|cache-leak-investigator.md|mr-review-resolver.md) continue;; esac; grep -q '^## Report' "$f" || echo "NO REPORT: $f"; done
 ```
 
 Commits in this repo must use the personal `tzoofu` identity (repo-local git config), not the work identity, and carry no co-author trailers.
@@ -38,7 +40,7 @@ The `description` field is what Claude reads to decide *when* to spawn the agent
 Two body shapes exist:
 
 - **Advisory/expert agents** (the majority): role statement, core responsibilities, methodology, then a closing `## Report` section.
-- **Workflow agents** (`anticipate-review`, `audit-and-stage`, `cache-leak-investigator`, `mr-review-resolver`): an `## Input contract` section stating what the caller must pass, numbered `## Step N:` sections, and a final report step. These are the ones that carry `maxTurns` and tight `tools` lists.
+- **Workflow agents** (`anticipate-review`, `audit-and-stage`, `cache-leak-investigator`, `mr-review-resolver`): an `## Input contract` section stating what the caller must pass, numbered `## Step N:` sections, and a final report step. These are the ones that carry `maxTurns` (40 for the read-only audit agents, 60 for `cache-leak-investigator`, 100 for `mr-review-resolver`, which loops over every open thread). `anticipate-review` and `audit-and-stage` also have tight `tools` lists; the other two are broader because they edit code or drive Playwright.
 
 ## Available Agents
 
@@ -99,4 +101,4 @@ When modifying or creating agent definitions:
 5. Set `effort` alongside `model`: `xhigh` for investigations and orchestration, `high` for security review and architecture, `low` for grep-and-verify loops and writing agents. Omit to inherit the session level
 6. Restrict `tools` on advisory agents to Read, Grep, Glob, Write, WebSearch plus the Context7/Ref docs tools — only agents that change code get Edit and Bash. Agents that read code get `LSP` in `tools` and `lsp-code-navigation` in `skills`; React-touching agents get `vercel:react-best-practices`. Never hardcode model version strings (e.g. `claude-sonnet-4-...`) — use the tier names only
 7. Security-capable agents (`appsec-vulnerability-analyst`, `code-reviewer`, `secure-backend-architect`) must keep the `mcp__wiz__*` tools in their `tools` list — the global CLAUDE.md delegates Wiz scans to them when the main session lacks the scanner
-8. Every agent body ends with a `## Report` section defining the ≤300-word output shape
+8. Advisory agents end with a `## Report` section defining the ≤300-word output shape; workflow agents instead end with their final report step (`anticipate-review` ≤250 words plus comment texts, `audit-and-stage` a fixed-format verdict, the other two ≤300 words)

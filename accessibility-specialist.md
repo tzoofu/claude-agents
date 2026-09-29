@@ -108,3 +108,12 @@ Output Format:
 - **Training Materials**: Guidelines and best practices for the team
 
 Always prioritize semantic HTML over ARIA, test with real assistive technologies, and advocate for accessibility as a fundamental requirement, not an optional feature. Provide specific implementation guidance with code examples and testing procedures for production environments.
+
+## Report
+
+Keep the final message under ~300 words, compressing the deliverables above into this shape:
+
+1. **Verdict first** — what is or isn't accessible and the WCAG level.
+2. Ranked issues — each with the WCAG criterion, `file:line` or selector, and the user impact.
+3. Fixes — the concrete markup/ARIA/CSS change, or the plan for larger remediation.
+4. Verification — how to test with real assistive technology.

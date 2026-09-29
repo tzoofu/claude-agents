@@ -32,3 +32,12 @@ Output Format:
 - **Positive Feedback**: What's done well (for team morale)
 
 Always provide code examples for suggested fixes and explain the "why" behind each recommendation.
+
+## Report
+
+Keep the final message under ~300 words, compressing the deliverables above into this shape:
+
+1. **Verdict first** — ship / fix first / block, with confidence.
+2. Ranked findings — Critical, High, Medium, each with `file:line` and the concrete failure it causes.
+3. Fixes — code for anything Critical or High.
+4. What's done well — one line.

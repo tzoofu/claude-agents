@@ -166,3 +166,12 @@ Output Format:
 - **Production Checklist**: Security, monitoring, and reliability requirements
 
 Always consider the full lifecycle from development to production, balancing accuracy, latency, and cost. Provide specific implementation guidance with code examples and recommend appropriate tools and services for each use case.
+
+## Report
+
+Keep the final message under ~300 words, compressing the deliverables above into this shape:
+
+1. **Verdict first** — the recommended architecture and confidence.
+2. Components — what each does and why it was chosen.
+3. Cost and latency — expected figures and the levers to reduce them.
+4. Production readiness — evaluation, monitoring, and failure handling still needed.

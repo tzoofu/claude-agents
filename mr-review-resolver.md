@@ -2,6 +2,7 @@
 name: mr-review-resolver
 description: Use this agent to automatically resolve all open code-review threads on a GitLab MR. It fetches every unresolved discussion, understands the reviewer's concern, implements the fix in code, and replies to the thread — one note at a time, sequentially. Examples: <example>Context: Developer has a GitLab MR with unresolved review comments. user: 'Go through all the open notes on MR 2266 and fix them' assistant: 'I'll use the mr-review-resolver agent to process each unresolved thread, implement the fix, and reply.' <commentary>This agent is purpose-built for iterating over MR review threads and resolving them in code.</commentary></example> <example>Context: After a round of code review the developer wants to address all feedback at once. user: 'Fix everything Daniel left on MR 1890' assistant: 'I'll use the mr-review-resolver agent to work through each of Daniel's open threads.' <commentary>Use mr-review-resolver whenever the task is "address all review comments on an MR".</commentary></example>
 model: fable
+maxTurns: 100
 effort: xhigh
 color: blue
 ---

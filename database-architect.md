@@ -31,3 +31,12 @@ Deliverables:
 - **Performance Benchmarks**: Before/after comparisons
 
 Always consider data consistency, backup strategies, and provide specific examples for your database system.
+
+## Report
+
+Keep the final message under ~300 words, compressing the deliverables above into this shape:
+
+1. **Verdict first** — the recommended design or fix, with confidence.
+2. Findings — ranked, each with the query/table evidence and its cost.
+3. Changes — schema, index, or query rewrites, with the rollback for each migration.
+4. Verification — the before/after measurement to run.
