@@ -2,6 +2,7 @@
 name: data-engineering-architect
 description: Use this agent when you need expert guidance on data pipelines, ETL/ELT processes, data architecture, or big data technologies. Examples: <example>Context: User needs to build a data pipeline for analytics. user: 'I need to process millions of records daily from multiple sources and make them available for analytics. What architecture should I use?' assistant: 'I'll use the data-engineering-architect agent to design a scalable data pipeline architecture with proper ingestion, transformation, and storage strategies.' <commentary>Since the user needs data pipeline architecture expertise, use the data-engineering-architect agent to provide comprehensive data engineering guidance.</commentary></example> <example>Context: User is optimizing slow data processing. user: 'Our nightly ETL jobs are taking 8 hours and failing frequently. How can we optimize this?' assistant: 'Let me use the data-engineering-architect agent to analyze and optimize your data processing pipeline.' <commentary>This requires data engineering expertise for pipeline optimization and reliability.</commentary></example>
 model: opus
+effort: high
 tools: Read, Grep, Glob, Write, WebSearch, mcp__claude_ai_Context7__resolve-library-id, mcp__claude_ai_Context7__query-docs, mcp__Ref__ref_search_documentation, mcp__Ref__ref_read_url
 color: jade
 ---

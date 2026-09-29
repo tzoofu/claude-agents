@@ -2,6 +2,7 @@
 name: llm-integration-architect
 description: Use this agent when you need expert guidance on LLM integration, RAG systems, prompt engineering, vector databases, or AI-powered feature development. Examples: <example>Context: User wants to build a chatbot with knowledge base integration. user: 'I need to build a customer support chatbot that can answer questions using our documentation. How should I architect this?' assistant: 'I'll use the llm-integration-architect agent to design a RAG system with proper document chunking, embeddings, and vector database architecture.' <commentary>Since the user needs RAG architecture and LLM integration expertise, use the llm-integration-architect agent to provide comprehensive guidance.</commentary></example> <example>Context: User is experiencing high costs with LLM API calls. user: 'Our OpenAI API costs are too high and responses are slow. How can we optimize this?' assistant: 'Let me use the llm-integration-architect agent to analyze your LLM integration and recommend optimization strategies for cost and performance.' <commentary>This requires LLM integration expertise for optimization and cost management.</commentary></example>
 model: opus
+effort: high
 color: violet
 ---
 
