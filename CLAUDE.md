@@ -10,8 +10,8 @@ Quick sanity check after editing frontmatter (each file must start with a `---` 
 
 ```bash
 for f in *.md; do [ "$f" = CLAUDE.md ] && continue; head -1 "$f" | grep -q '^---$' && grep -q '^name:' "$f" && grep -q '^description:' "$f" && grep -q '<commentary>' "$f" || echo "BAD: $f"; done
-# advisory agents (everything except the four workflow agents) must end with a Report section
-for f in *.md; do case "$f" in CLAUDE.md|anticipate-review.md|audit-and-stage.md|cache-leak-investigator.md|mr-review-resolver.md) continue;; esac; grep -q '^## Report' "$f" || echo "NO REPORT: $f"; done
+# advisory agents (everything except the workflow agents) must end with a Report section
+for f in *.md; do case "$f" in CLAUDE.md|anticipate-review.md|audit-and-stage.md|cache-leak-investigator.md|integration-scanner.md|mr-review-resolver.md) continue;; esac; grep -q '^## Report' "$f" || echo "NO REPORT: $f"; done
 ```
 
 Commits in this repo must use the personal `tzoofu` identity (repo-local git config), not the work identity, and carry no co-author trailers.
@@ -40,7 +40,7 @@ The `description` field is what Claude reads to decide *when* to spawn the agent
 Two body shapes exist:
 
 - **Advisory/expert agents** (the majority): role statement, core responsibilities, methodology, then a closing `## Report` section.
-- **Workflow agents** (`anticipate-review`, `audit-and-stage`, `cache-leak-investigator`, `mr-review-resolver`): an `## Input contract` section stating what the caller must pass, numbered `## Step N:` sections, and a final report step. These are the ones that carry `maxTurns` (40 for the read-only audit agents, 60 for `cache-leak-investigator`, 100 for `mr-review-resolver`, which loops over every open thread). `anticipate-review` and `audit-and-stage` also have tight `tools` lists; the other two are broader because they edit code or drive Playwright.
+- **Workflow agents** (`anticipate-review`, `audit-and-stage`, `cache-leak-investigator`, `integration-scanner`, `mr-review-resolver`): an `## Input contract` section stating what the caller must pass, numbered `## Step N:` sections, and a final report step. These are the ones that carry `maxTurns` (40 for the read-only audit and scan agents, 60 for `cache-leak-investigator`, 100 for `mr-review-resolver`, which loops over every open thread). `anticipate-review`, `audit-and-stage` and `integration-scanner` also have tight `tools` lists; the other two are broader because they edit code or drive Playwright.
 
 ## Available Agents
 
@@ -60,6 +60,7 @@ Two body shapes exist:
 - **anticipate-review**: Read-only audit of an MR or local diff against a project's `.claude/rules/` tree; predicts reviewer findings
 - **audit-and-stage**: Pre-commit pass — rules audit, library doc check via Context7/Ref, validation run, then selective `git add` of only this session's files
 - **mr-review-resolver**: Sequentially fixes and replies to every open GitLab MR review thread
+- **integration-scanner**: Read-only scan of one repo for external integrations, infra IDs, env var names and (pim mode) a security pass; feeds the integration-catalog mapping skills
 - **cache-leak-investigator**: Layer-by-layer forensics for stale/shared-data bugs across CDN, framework, and browser caches, with live Playwright reproduction
 
 **AI & ML:**
